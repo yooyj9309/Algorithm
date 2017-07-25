@@ -26,21 +26,21 @@ public class Main2 {
 				break;
 			map[vt1][vt2]=map[vt2][vt1]=1;
 		}
-		bfs(1);
+		bfs(1);//1ë²ˆ ë…¸ë“œë¶€í„° ì‹œì‘í•œë‹¤ê³  ê°€ì •í• ë•Œ
 	}
 	public static void bfs(int start){
 		int v;
 		v=start;
 		visit[start]=1;
-		System.out.println("½ÃÀÛÁ¡Àº "+start);
+		System.out.println("ì‹œì‘ì ì€ "+start);
 		queue[rear++]=start;
-		while(front<rear)//ÇÁ·ĞÆ®¶û ·¹¾î¶û °°¾ÆÁú¶§ -> ¸ğµç ³ëµå¸¦ ¹æ¹®ÇÑ°Í°ú °°À½
+		while(front<rear)//í”„ë¡ íŠ¸ë‘ ë ˆì–´ë‘ ê°™ì•„ì§ˆë•Œ -> ëª¨ë“  ë…¸ë“œë¥¼ ë°©ë¬¸í•œê²ƒê³¼ ê°™ìŒ
 		{
-			v=queue[front++];//v´Â ÇöÀç ³ëµå¶ó°í »ı°¢ÇÏÀÚ
+			v=queue[front++];//vëŠ” í˜„ì¬ ë…¸ë“œë¼ê³  ìƒê°í•˜ì
 			for(int i=0;i<30;i++){
 				if(map[v][i]==1&&visit[v]!=1)
 				{
-					visit[i]=1;//i´Â ÇöÀç ³ëµå¿¡¼­ ´ÙÀ½À¸·Î ¿òÁ÷ÀÎ³ëµåÀÌ´Ù.
+					visit[i]=1;//iëŠ” í˜„ì¬ ë…¸ë“œì—ì„œ ë‹¤ìŒìœ¼ë¡œ ì›€ì§ì¸ë…¸ë“œì´ë‹¤.
 					queue[rear++]=i;
 				}
 			}
