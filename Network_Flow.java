@@ -1,0 +1,10 @@
+package Algortihm2;
+
+public class Network_Flow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
